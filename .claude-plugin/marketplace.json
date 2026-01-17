@@ -1,24 +1,28 @@
 {
-  "name": "tailwindcss-llms",
-  "version": "0.0.2",
-  "displayName": "Tailwind CSS Documentation",
-  "description": "Tailwind CSS official documentation in Markdown format, optimized for LLMs. Query any Tailwind CSS question with /tailwind-docs command.",
-  "author": "wulala0102",
-  "repository": "wulala0102/tailwindcss-llms",
-  "license": "MIT",
-  "keywords": [
-    "tailwindcss",
-    "documentation",
-    "css",
-    "llm",
-    "markdown"
-  ],
-  "skills": [
+  "owner": "wulala0102",
+  "plugins": [
     {
-      "name": "tailwind-docs",
-      "path": "skills/tailwind-docs",
-      "description": "Query Tailwind CSS documentation with intelligent search and examples"
+      "name": "tailwindcss-llms",
+      "version": "0.0.2",
+      "displayName": "Tailwind CSS Documentation",
+      "description": "Tailwind CSS official documentation in Markdown format, optimized for LLMs. Query any Tailwind CSS question with /tailwind-docs command.",
+      "repository": "wulala0102/tailwindcss-llms",
+      "license": "MIT",
+      "keywords": [
+        "tailwindcss",
+        "documentation",
+        "css",
+        "llm",
+        "markdown"
+      ],
+      "skills": [
+        {
+          "name": "tailwind-docs",
+          "path": "skills/tailwind-docs",
+          "description": "Query Tailwind CSS documentation with intelligent search and examples"
+        }
+      ],
+      "postInstall": "node scripts/postinstall.js"
     }
-  ],
-  "postInstall": "node scripts/postinstall.js"
+  ]
 }
