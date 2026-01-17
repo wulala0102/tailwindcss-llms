@@ -3,20 +3,19 @@
   "owner": {
     "name": "wulala0102"
   },
+  "metadata": {
+    "description": "Tailwind CSS documentation for LLMs",
+    "version": "0.0.2"
+  },
   "plugins": [
     {
-      "name": "tailwindcss-llms",
-      "version": "0.0.2",
+      "name": "tailwind-docs",
       "description": "Tailwind CSS official documentation in Markdown format, optimized for LLMs. Query any Tailwind CSS question with /tailwind-docs command.",
-      "source": {
-        "type": "npm",
-        "package": "tailwindcss-llms"
-      },
-      "skills": {
-        "tailwind-docs": {
-          "path": "skills/tailwind-docs"
-        }
-      }
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/tailwind-docs"
+      ]
     }
   ]
 }
