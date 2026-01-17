@@ -1,6 +1,8 @@
 # tailwindcss-llms
 
-Tailwind CSS 官方文档的 Markdown 格式版本，专为 LLM（大语言模型）优化。
+> Tailwind CSS 官方文档的 Markdown 格式版本，专为 LLM（大语言模型）优化
+
+在 Claude Code 中使用 `/tailwind-docs` 即可查询任何 Tailwind CSS 问题！
 
 ## 特性
 
@@ -10,6 +12,7 @@ Tailwind CSS 官方文档的 Markdown 格式版本，专为 LLM（大语言模�
 - 🔄 安装时自动更新到最新版本
 - 📄 包含 llms.txt 索引文件，列出所有文档及描述
 - 📊 安装过程带进度条，清晰显示处理状态
+- ⚡️ 内置 Claude Code skill，开箱即用
 
 ## 安装
 
@@ -31,195 +34,78 @@ yarn add tailwindcss-llms
 
 ## 使用
 
-安装完成后，所有的 Markdown 文档都位于 `node_modules/tailwindcss-llms/docs/` 目录中。
-
-### 使用包提供的 API
-
-```javascript
-const { getAllDocs, readDoc, getAllDocPaths } = require('tailwindcss-llms');
-
-// 读取特定文档
-const colorDoc = readDoc('colors.md');
-console.log(colorDoc);
-
-// 获取所有文档路径
-const paths = getAllDocPaths();
-console.log(`共有 ${paths.length} 个文档`);
-
-// 获取所有文档内容
-const allDocs = getAllDocs();
-allDocs.forEach(doc => {
-  console.log(`${doc.path}: ${doc.content.substring(0, 100)}...`);
-});
-```
-
-### 直接读取文件
-
-```javascript
-const fs = require('fs');
-const path = require('path');
-
-// 读取特定文档
-const colorDoc = fs.readFileSync(
-  path.join(__dirname, 'node_modules/tailwindcss-llms/docs/colors.md'),
-  'utf-8'
-);
-
-console.log(colorDoc);
-```
-
-### 与 LLM 集成
-
-将文档内容作为上下文传递给 LLM：
-
-```javascript
-const { getAllDocs } = require('tailwindcss-llms');
-
-// 获取所有文档
-const docs = getAllDocs();
-
-// 将文档格式化为 LLM 上下文
-const context = docs.map(doc => {
-  return `File: ${doc.path}\n\n${doc.content}`;
-}).join('\n\n---\n\n');
-
-// 传递给 LLM API
-async function queryWithTailwindContext(question) {
-  // 示例：使用 OpenAI API
-  const response = await openai.chat.completions.create({
-    model: "gpt-4",
-    messages: [
-      {
-        role: "system",
-        content: "You are a Tailwind CSS expert. Use the following documentation to answer questions:\n\n" + context
-      },
-      {
-        role: "user",
-        content: question
-      }
-    ]
-  });
-
-  return response.choices[0].message.content;
-}
-```
-
-### llms.txt 索引文件
-
-包中包含了 `llms.txt` 文件，列出了所有 185 个文档的标题、路径和描述。格式示例：
-
-```markdown
-- [Colors](docs/colors.md) - Using and customizing the color palette in Tailwind CSS projects.
-- [Dark mode](docs/dark-mode.md) - Using variants to style your site in dark mode.
-- [Responsive design](docs/responsive-design.md) - Using responsive utility variants to build adaptive user interfaces.
-```
-
-读取方式：
-
-```javascript
-const fs = require('fs');
-const path = require('path');
-
-// 读取 llms.txt
-const llmsTxt = fs.readFileSync(
-  path.join(__dirname, 'node_modules/tailwindcss-llms/llms.txt'),
-  'utf-8'
-);
-
-console.log(llmsTxt);
-```
+安装完成后，最简单的使用方式是通过 Claude Code skill。
 
 ## 在 Claude Code 中使用
 
-### 快速开始
+### 方式一：使用 Skill（推荐）
+
+这个包包含一个内置的 Claude Code skill，提供最便捷的使用体验。
 
 1. **安装包**
-
-在你的项目中安装 `tailwindcss-llms`：
 
 ```bash
 npm install tailwindcss-llms
 ```
 
-2. **提供文档给 Claude**
+2. **激活 Skill**
 
-在对话中，你可以直接让 Claude 读取文档：
+在 Claude Code 中运行：
 
-```
-请阅读 node_modules/tailwindcss-llms/docs/colors.md 文件，告诉我如何使用 Tailwind 的颜色系统
-```
-
-或者使用 API：
-
-```javascript
-const { readDoc } = require('tailwindcss-llms');
-const doc = readDoc('colors.md');
-console.log(doc);
+```bash
+/tailwind-docs
 ```
 
-### 使用场景
-
-#### 1. 学习 Tailwind CSS
+或者直接在对话中提问：
 
 ```
-我想学习 Tailwind CSS 的响应式设计，请阅读 node_modules/tailwindcss-llms/docs/responsive-design.md 并给我讲解
+如何在 Tailwind 中创建渐变背景？
 ```
 
-#### 2. 代码实现帮助
+Skill 会自动：
+- 查找相关文档
+- 提供准确答案
+- 给出代码示例
+- 引用文档来源
+
+3. **示例对话**
 
 ```
-我需要实现一个深色模式切换功能，请参考 node_modules/tailwindcss-llms/docs/dark-mode.md 帮我实现
+你: /tailwind-docs 如何实现深色模式？
+
+Claude: 让我查看深色模式文档...
+[自动读取 docs/dark-mode.md]
+
+Tailwind CSS 提供了 dark: 变体来实现深色模式。有三种策略：
+
+1. 使用 media query (默认):
+<div class="bg-white dark:bg-gray-800">
+  内容
+</div>
+
+2. 使用 class 策略:
+在 tailwind.config.js 中配置...
 ```
 
-#### 3. 查找特定工具类
+### 方式二：其他 LLM 工具
 
-```
-请查看 node_modules/tailwindcss-llms/llms.txt 找到所有关于 flex 布局的文档
-```
+如果你使用其他 LLM 工具，可以：
 
-#### 4. 批量查询
+1. **读取 llms.txt 索引**
+   ```
+   查看 node_modules/tailwindcss-llms/llms.txt 了解所有可用文档
+   ```
 
-```javascript
-// 创建一个脚本，让 Claude 执行
-const { getAllDocs } = require('tailwindcss-llms');
-const docs = getAllDocs();
+2. **直接读取文档**
+   ```
+   读取 node_modules/tailwindcss-llms/docs/colors.md
+   ```
 
-// 查找所有包含 "animation" 的文档
-const animationDocs = docs.filter(doc =>
-  doc.path.includes('animation') ||
-  doc.content.toLowerCase().includes('animation')
-);
-
-console.log(`找到 ${animationDocs.length} 个相关文档`);
-animationDocs.forEach(doc => console.log(`- ${doc.path}`));
-```
-
-### 最佳实践
-
-1. **查看索引** - 先查看 `llms.txt` 了解所有可用文档
-2. **按需加载** - 只读取需要的文档，避免一次性加载所有内容
-3. **结合实践** - 让 Claude 根据文档生成实际可用的代码示例
-4. **保持更新** - 定期更新包以获取最新的 Tailwind CSS 文档
-
-### 示例对话
-
-```
-你: 我想用 Tailwind 创建一个渐变背景的按钮
-
-Claude: 让我先查看相关文档...
-[读取 node_modules/tailwindcss-llms/docs/background-image.md]
-
-根据文档，你可以这样创建渐变背景按钮：
-
-<button class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-2 px-4 rounded">
-  渐变按钮
-</button>
-
-文档中还提到了其他渐变方向：
-- bg-gradient-to-t (从下到上)
-- bg-gradient-to-br (从左上到右下)
-...
-```
+3. **使用 API**（用于自定义工具）
+   ```javascript
+   const { getAllDocs, readDoc } = require('tailwindcss-llms');
+   const doc = readDoc('colors.md');
+   ```
 
 ## 更新文档
 
@@ -238,45 +124,16 @@ npm install
 
 ## API 参考
 
-该包提供以下 API：
+如需编程访问文档（例如构建自定义工具），该包提供以下 API：
 
-### `getAllDocs()`
+| API | 说明 | 示例 |
+|-----|------|------|
+| `getAllDocs()` | 获取所有文档 | `const docs = getAllDocs()` |
+| `readDoc(path)` | 读取指定文档 | `const doc = readDoc('colors.md')` |
+| `getAllDocPaths()` | 获取所有文档路径 | `const paths = getAllDocPaths()` |
+| `docsDir` | 文档目录路径 | `console.log(docsDir)` |
 
-获取所有文档的内容。
-
-```javascript
-const { getAllDocs } = require('tailwindcss-llms');
-const docs = getAllDocs();
-// 返回: [{ path: 'colors.md', content: '...' }, ...]
-```
-
-### `readDoc(relativePath)`
-
-读取指定文档。
-
-```javascript
-const { readDoc } = require('tailwindcss-llms');
-const content = readDoc('colors.md');
-```
-
-### `getAllDocPaths()`
-
-获取所有文档的文件路径。
-
-```javascript
-const { getAllDocPaths } = require('tailwindcss-llms');
-const paths = getAllDocPaths();
-// 返回: ['/absolute/path/to/docs/colors.md', ...]
-```
-
-### `docsDir`
-
-文档目录的绝对路径。
-
-```javascript
-const { docsDir } = require('tailwindcss-llms');
-console.log(docsDir); // '/path/to/node_modules/tailwindcss-llms/docs'
-```
+详细用法请参考 [API 文档](./index.js)。
 
 ## 文档结构
 
@@ -289,6 +146,54 @@ console.log(docsDir); // '/path/to/node_modules/tailwindcss-llms/docs'
 - 🎯 核心概念和最佳实践
 
 所有文档均为纯 Markdown 格式，保持简洁易读。
+
+## Claude Code Skill
+
+该包包含一个开箱即用的 Claude Code skill，位于 `skills/tailwind-docs/`。
+
+### Skill 功能
+
+- **自动文档查找** - 根据问题自动定位相关文档
+- **智能回答** - 基于官方文档提供准确答案
+- **代码示例** - 每个回答都包含实际可用的代码
+- **文档引用** - 明确指出信息来源
+
+### 触发方式
+
+1. **显式调用**
+   ```
+   /tailwind-docs 如何使用 flex 布局？
+   ```
+
+2. **关键词触发**
+   当你的问题包含 "tailwind"、"tw" 或 "css" 时，skill 可能会自动激活
+
+3. **自然对话**
+   ```
+   我想让这个 div 在大屏幕上居中，小屏幕上占满宽度
+   ```
+
+### Skill 配置
+
+Skill 配置文件：`skills/tailwind-docs/skill.json`
+
+```json
+{
+  "name": "tailwind-docs",
+  "version": "1.0.0",
+  "description": "Query Tailwind CSS documentation",
+  "triggerWords": ["tailwind", "tw", "css"],
+  "userInvocable": true
+}
+```
+
+### 自定义 Skill
+
+你可以修改 `skills/tailwind-docs/prompt.md` 来自定义 skill 的行为：
+
+1. 调整回答风格
+2. 添加特定的文档优先级
+3. 自定义代码示例格式
 
 ## 开发
 

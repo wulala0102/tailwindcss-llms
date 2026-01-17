@@ -1,6 +1,6 @@
 {
   "name": "tailwindcss-llms",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Tailwind CSS documentation in markdown format optimized for LLMs",
   "main": "index.js",
   "scripts": {
@@ -22,6 +22,7 @@
   "files": [
     "docs/",
     "scripts/",
+    "skills/",
     "index.js",
     "llms.txt",
     "README.md"

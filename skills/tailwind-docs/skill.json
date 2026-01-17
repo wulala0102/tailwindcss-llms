@@ -1,0 +1,7 @@
+{
+  "name": "tailwind-docs",
+  "version": "1.0.0",
+  "description": "Query Tailwind CSS documentation",
+  "triggerWords": ["tailwind", "tw", "css"],
+  "userInvocable": true
+}
