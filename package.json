@@ -1,0 +1,33 @@
+{
+  "name": "tailwindcss-llms",
+  "version": "0.0.1",
+  "description": "Tailwind CSS documentation in markdown format optimized for LLMs",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "node scripts/postinstall.js",
+    "build": "node scripts/build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tailwindcss",
+    "documentation",
+    "markdown",
+    "llm",
+    "ai"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {},
+  "files": [
+    "docs/",
+    "scripts/",
+    "index.js",
+    "llms.txt",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/tailwindcss-llms.git"
+  }
+}

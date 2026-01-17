@@ -1,0 +1,208 @@
+# Tailwind CSS Documentation
+
+This package provides Tailwind CSS documentation in markdown format, optimized for Large Language Models (LLMs).
+
+## Documentation Files
+
+All documentation files are located in the `docs/` directory.
+Total files: 185
+
+## Available Documents
+
+- [accent-color](docs/accent-color.md) - Utilities for controlling the accented color of a form control.
+- [Adding custom styles](docs/adding-custom-styles.md) - Best practices for adding your own custom styles in Tailwind projects.
+- [align-content](docs/align-content.md) - Utilities for controlling how rows are positioned in multi-row flex and grid containers.
+- [align-items](docs/align-items.md)
+- [align-self](docs/align-self.md)
+- [animation](docs/animation.md) - Utilities for animating elements with CSS animations.
+- [appearance](docs/appearance.md) - Utilities for suppressing native form control styling.
+- [aspect-ratio](docs/aspect-ratio.md) - Utilities for controlling the aspect ratio of an element.
+- [backdrop-filter: blur()](docs/backdrop-filter-blur.md) - Utilities for applying backdrop blur filters to an element.
+- [backdrop-filter: brightness()](docs/backdrop-filter-brightness.md) - Utilities for applying backdrop brightness filters to an element.
+- [backdrop-filter: contrast()](docs/backdrop-filter-contrast.md) - Utilities for applying backdrop contrast filters to an element.
+- [backdrop-filter: grayscale()](docs/backdrop-filter-grayscale.md) - Utilities for applying backdrop grayscale filters to an element.
+- [backdrop-filter: hue-rotate()](docs/backdrop-filter-hue-rotate.md) - Utilities for applying backdrop hue-rotate filters to an element.
+- [backdrop-filter: invert()](docs/backdrop-filter-invert.md) - Utilities for applying backdrop invert filters to an element.
+- [backdrop-filter: opacity()](docs/backdrop-filter-opacity.md) - Utilities for applying backdrop opacity filters to an element.
+- [backdrop-filter: saturate()](docs/backdrop-filter-saturate.md) - Utilities for applying backdrop saturation filters to an element.
+- [backdrop-filter: sepia()](docs/backdrop-filter-sepia.md) - Utilities for applying backdrop sepia filters to an element.
+- [backdrop-filter](docs/backdrop-filter.md) - Utilities for applying backdrop filters to an element.
+- [backface-visibility](docs/backface-visibility.md) - Utilities for controlling if an element's backface is visible.
+- [background-attachment](docs/background-attachment.md) - Utilities for controlling how a background image behaves when scrolling.
+- [background-blend-mode](docs/background-blend-mode.md)
+- [background-clip](docs/background-clip.md) - Utilities for controlling the bounding box of an element's background.
+- [background-color](docs/background-color.md) - Utilities for controlling an element's background color.
+- [background-image](docs/background-image.md) - Utilities for controlling an element's background image.
+- [background-origin](docs/background-origin.md)
+- [background-position](docs/background-position.md) - Utilities for controlling the position of an element's background image.
+- [background-repeat](docs/background-repeat.md) - Utilities for controlling the repetition of an element's background image.
+- [background-size](docs/background-size.md) - Utilities for controlling the background size of an element's background image.
+- [border-collapse](docs/border-collapse.md) - Utilities for controlling whether table borders should collapse or be separated.
+- [border-color](docs/border-color.md) - Utilities for controlling the color of an element's borders.
+- [border-radius](docs/border-radius.md) - Utilities for controlling the border radius of an element.
+- [border-spacing](docs/border-spacing.md) - Utilities for controlling the spacing between table borders.
+- [border-style](docs/border-style.md) - Utilities for controlling the style of an element's borders.
+- [border-width](docs/border-width.md) - Utilities for controlling the width of an element's borders.
+- [box-decoration-break](docs/box-decoration-break.md)
+- [box-shadow](docs/box-shadow.md) - Utilities for controlling the box shadow of an element.
+- [box-sizing](docs/box-sizing.md) - Utilities for controlling how the browser should calculate an element's total size.
+- [break-after](docs/break-after.md) - Utilities for controlling how a column or page should break after an element.
+- [break-before](docs/break-before.md) - Utilities for controlling how a column or page should break before an element.
+- [break-inside](docs/break-inside.md) - Utilities for controlling how a column or page should break within an element.
+- [caption-side](docs/caption-side.md) - Utilities for controlling the alignment of a caption element inside of a table.
+- [caret-color](docs/caret-color.md) - Utilities for controlling the color of the text input cursor.
+- [clear](docs/clear.md) - Utilities for controlling the wrapping of content around an element.
+- [color-scheme](docs/color-scheme.md) - Utilities for controlling the color scheme of an element.
+- [color](docs/color.md) - Utilities for controlling the text color of an element.
+- [Colors](docs/colors.md) - Using and customizing the color palette in Tailwind CSS projects.
+- [columns](docs/columns.md) - Utilities for controlling the number of columns within an element.
+- [Compatibility](docs/compatibility.md) - Learn about browser support and compatibility with other tooling.
+- [content](docs/content.md) - Utilities for controlling the content of the before and after pseudo-elements.
+- [cursor](docs/cursor.md) - Utilities for controlling the cursor style when hovering over an element.
+- [Dark mode](docs/dark-mode.md) - Using variants to style your site in dark mode.
+- [Detecting classes in source files](docs/detecting-classes-in-source-files.md) - Understanding and customizing how Tailwind scans your source files.
+- [display](docs/display.md) - Utilities for controlling the display box type of an element.
+- [Editor setup](docs/editor-setup.md) - Tooling to improve the developer experience when working with Tailwind CSS.
+- [field-sizing](docs/field-sizing.md) - Utilities for controlling the sizing of form controls.
+- [fill](docs/fill.md) - Utilities for styling the fill of SVG elements.
+- [filter: blur()](docs/filter-blur.md) - Utilities for applying blur filters to an element.
+- [filter: brightness()](docs/filter-brightness.md) - Utilities for applying brightness filters to an element.
+- [filter: contrast()](docs/filter-contrast.md) - Utilities for applying contrast filters to an element.
+- [filter: drop-shadow()](docs/filter-drop-shadow.md) - Utilities for applying drop-shadow filters to an element.
+- [filter: grayscale()](docs/filter-grayscale.md) - Utilities for applying grayscale filters to an element.
+- [filter: hue-rotate()](docs/filter-hue-rotate.md) - Utilities for applying hue-rotate filters to an element.
+- [filter: invert()](docs/filter-invert.md) - Utilities for applying invert filters to an element.
+- [filter: saturate()](docs/filter-saturate.md) - Utilities for applying saturation filters to an element.
+- [filter: sepia()](docs/filter-sepia.md) - Utilities for applying sepia filters to an element.
+- [filter](docs/filter.md) - Utilities for applying filters to an element.
+- [flex-basis](docs/flex-basis.md) - Utilities for controlling the initial size of flex items.
+- [flex-direction](docs/flex-direction.md) - Utilities for controlling the direction of flex items.
+- [flex-grow](docs/flex-grow.md) - Utilities for controlling how flex items grow.
+- [flex-shrink](docs/flex-shrink.md) - Utilities for controlling how flex items shrink.
+- [flex-wrap](docs/flex-wrap.md) - Utilities for controlling how flex items wrap.
+- [flex](docs/flex.md) - Utilities for controlling how flex items both grow and shrink.
+- [float](docs/float.md) - Utilities for controlling the wrapping of content around an element.
+- [font-family](docs/font-family.md) - Utilities for controlling the font family of an element.
+- [font-size](docs/font-size.md) - Utilities for controlling the font size of an element.
+- [font-smoothing](docs/font-smoothing.md) - Utilities for controlling the font smoothing of an element.
+- [font-stretch](docs/font-stretch.md) - Utilities for selecting the width of a font face.
+- [font-style](docs/font-style.md) - Utilities for controlling the style of text.
+- [font-variant-numeric](docs/font-variant-numeric.md) - Utilities for controlling the variant of numbers.
+- [font-weight](docs/font-weight.md) - Utilities for controlling the font weight of an element.
+- [forced-color-adjust](docs/forced-color-adjust.md) - Utilities for opting in and out of forced colors.
+- [Functions and directives](docs/functions-and-directives.md) - A reference for the custom functions and directives Tailwind exposes to your CSS.
+- [gap](docs/gap.md) - Utilities for controlling gutters between grid and flexbox items.
+- [grid-auto-columns](docs/grid-auto-columns.md) - Utilities for controlling the size of implicitly-created grid columns.
+- [grid-auto-flow](docs/grid-auto-flow.md) - Utilities for controlling how elements in a grid are auto-placed.
+- [grid-auto-rows](docs/grid-auto-rows.md) - Utilities for controlling the size of implicitly-created grid rows.
+- [grid-column](docs/grid-column.md) - Utilities for controlling how elements are sized and placed across grid columns.
+- [grid-row](docs/grid-row.md) - Utilities for controlling how elements are sized and placed across grid rows.
+- [grid-template-columns](docs/grid-template-columns.md) - Utilities for specifying the columns in a grid layout.
+- [grid-template-rows](docs/grid-template-rows.md) - Utilities for specifying the rows in a grid layout.
+- [height](docs/height.md) - Utilities for setting the height of an element.
+- [Hover, focus, and other states](docs/hover-focus-and-other-states.md) - Using utilities to style elements on hover, focus, and more.
+- [hyphens](docs/hyphens.md) - Utilities for controlling how words should be hyphenated.
+- [isolation](docs/isolation.md)
+- [justify-content](docs/justify-content.md)
+- [justify-items](docs/justify-items.md) - Utilities for controlling how grid items are aligned along their inline axis.
+- [justify-self](docs/justify-self.md) - Utilities for controlling how an individual grid item is aligned along its inline axis.
+- [letter-spacing](docs/letter-spacing.md) - Utilities for controlling the tracking, or letter spacing, of an element.
+- [line-clamp](docs/line-clamp.md) - Utilities for clamping text to a specific number of lines.
+- [line-height](docs/line-height.md) - Utilities for controlling the leading, or line height, of an element.
+- [list-style-image](docs/list-style-image.md) - Utilities for controlling the marker images for list items.
+- [list-style-position](docs/list-style-position.md) - Utilities for controlling the position of bullets and numbers in lists.
+- [list-style-type](docs/list-style-type.md) - Utilities for controlling the marker style of a list.
+- [margin](docs/margin.md) - Utilities for controlling an element's margin.
+- [mask-clip](docs/mask-clip.md) - Utilities for controlling the bounding box of an element's mask.
+- [mask-composite](docs/mask-composite.md) - Utilities for controlling how multiple masks are combined together.
+- [mask-image](docs/mask-image.md) - Utilities for controlling an element's mask image.
+- [mask-mode](docs/mask-mode.md) - Utilities for controlling an element's mask mode.
+- [mask-origin](docs/mask-origin.md)
+- [mask-position](docs/mask-position.md) - Utilities for controlling the position of an element's mask image.
+- [mask-repeat](docs/mask-repeat.md) - Utilities for controlling the repetition of an element's mask image.
+- [mask-size](docs/mask-size.md) - Utilities for controlling the size of an element's mask image.
+- [mask-type](docs/mask-type.md) - Utilities for controlling how an SVG mask is interpreted.
+- [max-height](docs/max-height.md) - Utilities for setting the maximum height of an element.
+- [max-width](docs/max-width.md) - Utilities for setting the maximum width of an element.
+- [min-height](docs/min-height.md) - Utilities for setting the minimum height of an element.
+- [min-width](docs/min-width.md) - Utilities for setting the minimum width of an element.
+- [mix-blend-mode](docs/mix-blend-mode.md) - Utilities for controlling how an element should blend with the background.
+- [object-fit](docs/object-fit.md) - Utilities for controlling how a replaced element's content should be resized.
+- [object-position](docs/object-position.md)
+- [opacity](docs/opacity.md) - Utilities for controlling the opacity of an element.
+- [order](docs/order.md) - Utilities for controlling the order of flex and grid items.
+- [outline-color](docs/outline-color.md) - Utilities for controlling the color of an element's outline.
+- [outline-offset](docs/outline-offset.md) - Utilities for controlling the offset of an element's outline.
+- [outline-style](docs/outline-style.md) - Utilities for controlling the style of an element's outline.
+- [outline-width](docs/outline-width.md) - Utilities for controlling the width of an element's outline.
+- [overflow-wrap](docs/overflow-wrap.md) - Utilities for controlling line breaks within words in an overflowing element.
+- [overflow](docs/overflow.md)
+- [overscroll-behavior](docs/overscroll-behavior.md)
+- [padding](docs/padding.md) - Utilities for controlling an element's padding.
+- [perspective-origin](docs/perspective-origin.md) - Utilities for controlling an element's perspective origin when placed in 3D space.
+- [perspective](docs/perspective.md) - Utilities for controlling an element's perspective when placed in 3D space.
+- [place-content](docs/place-content.md) - Utilities for controlling how content is justified and aligned at the same time.
+- [place-items](docs/place-items.md) - Utilities for controlling how items are justified and aligned at the same time.
+- [place-self](docs/place-self.md)
+- [pointer-events](docs/pointer-events.md) - Utilities for controlling whether an element responds to pointer events.
+- [position](docs/position.md) - Utilities for controlling how an element is positioned in the document.
+- [Preflight](docs/preflight.md) - An opinionated set of base styles for Tailwind projects.
+- [resize](docs/resize.md) - Utilities for controlling how an element can be resized.
+- [Responsive design](docs/responsive-design.md) - Using responsive utility variants to build adaptive user interfaces.
+- [rotate](docs/rotate.md) - Utilities for rotating elements.
+- [scale](docs/scale.md) - Utilities for scaling elements.
+- [scroll-behavior](docs/scroll-behavior.md) - Utilities for controlling the scroll behavior of an element.
+- [scroll-margin](docs/scroll-margin.md) - Utilities for controlling the scroll offset around items in a snap container.
+- [scroll-padding](docs/scroll-padding.md) - Utilities for controlling an element's scroll offset within a snap container.
+- [scroll-snap-align](docs/scroll-snap-align.md) - Utilities for controlling the scroll snap alignment of an element.
+- [scroll-snap-stop](docs/scroll-snap-stop.md) - Utilities for controlling whether you can skip past possible snap positions.
+- [scroll-snap-type](docs/scroll-snap-type.md) - Utilities for controlling how strictly snap points are enforced in a snap container.
+- [skew](docs/skew.md) - Utilities for skewing elements with transform.
+- [stroke-width](docs/stroke-width.md) - Utilities for styling the stroke width of SVG elements.
+- [stroke](docs/stroke.md) - Utilities for styling the stroke of SVG elements.
+- [Styling with utility classes](docs/styling-with-utility-classes.md) - Building complex components from a constrained set of primitive utilities.
+- [table-layout](docs/table-layout.md) - Utilities for controlling the table layout algorithm.
+- [text-align](docs/text-align.md) - Utilities for controlling the alignment of text.
+- [text-decoration-color](docs/text-decoration-color.md) - Utilities for controlling the color of text decorations.
+- [text-decoration-line](docs/text-decoration-line.md) - Utilities for controlling the decoration of text.
+- [text-decoration-style](docs/text-decoration-style.md) - Utilities for controlling the style of text decorations.
+- [text-decoration-thickness](docs/text-decoration-thickness.md) - Utilities for controlling the thickness of text decorations.
+- [text-indent](docs/text-indent.md) - Utilities for controlling the amount of empty space shown before text in a block.
+- [text-overflow](docs/text-overflow.md) - Utilities for controlling how the text of an element overflows.
+- [text-shadow](docs/text-shadow.md) - Utilities for controlling the shadow of a text element.
+- [text-transform](docs/text-transform.md) - Utilities for controlling the capitalization of text.
+- [text-underline-offset](docs/text-underline-offset.md) - Utilities for controlling the offset of a text underline.
+- [text-wrap](docs/text-wrap.md) - Utilities for controlling how text wraps within an element.
+- [Theme variables](docs/theme.md) - Using utility classes as an API for your design tokens.
+- [top / right / bottom / left](docs/top-right-bottom-left.md) - Utilities for controlling the placement of positioned elements.
+- [touch-action](docs/touch-action.md) - Utilities for controlling how an element can be scrolled and zoomed on touchscreens.
+- [transform-origin](docs/transform-origin.md) - Utilities for specifying the origin for an element's transformations.
+- [transform-style](docs/transform-style.md) - Utilities for controlling if an elements children are placed in 3D space.
+- [transform](docs/transform.md) - Utilities for transforming elements.
+- [transition-behavior](docs/transition-behavior.md) - Utilities to control the behavior of CSS transitions.
+- [transition-delay](docs/transition-delay.md) - Utilities for controlling the delay of CSS transitions.
+- [transition-duration](docs/transition-duration.md) - Utilities for controlling the duration of CSS transitions.
+- [transition-property](docs/transition-property.md) - Utilities for controlling which CSS properties transition.
+- [transition-timing-function](docs/transition-timing-function.md) - Utilities for controlling the easing of CSS transitions.
+- [translate](docs/translate.md) - Utilities for translating elements.
+- [Upgrade guide](docs/upgrade-guide.md) - Upgrading your Tailwind CSS projects from v3 to v4.
+- [user-select](docs/user-select.md) - Utilities for controlling whether the user can select text in an element.
+- [vertical-align](docs/vertical-align.md) - Utilities for controlling the vertical alignment of an inline or table-cell box.
+- [visibility](docs/visibility.md) - Utilities for controlling the visibility of an element.
+- [white-space](docs/white-space.md) - Utilities for controlling an element's white-space property.
+- [width](docs/width.md) - Utilities for setting the width of an element.
+- [will-change](docs/will-change.md) - Utilities for optimizing upcoming animations of elements that are expected to change.
+- [word-break](docs/word-break.md) - Utilities for controlling word breaks in an element.
+- [z-index](docs/z-index.md) - Utilities for controlling the stack order of an element.
+
+## Usage
+
+```javascript
+const { getAllDocs, readDoc } = require("tailwindcss-llms");
+
+// Get all documents
+const docs = getAllDocs();
+
+// Read a specific document
+const doc = readDoc("colors.md");
+```

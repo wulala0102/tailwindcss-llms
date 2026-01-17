@@ -1,0 +1,22 @@
+# 不需要发布到 npm 的文件
+
+# Git
+.git/
+.gitignore
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+temp-repo/
+*.log
+
+# 只发布必要的文件，其他都忽略
+# package.json 中的 files 字段会指定需要发布的文件
