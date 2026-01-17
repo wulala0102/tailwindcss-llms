@@ -7,7 +7,11 @@
 在 Claude Code 中运行：
 
 ```bash
+# 添加插件市场
 /plugin marketplace add wulala0102/tailwindcss-llms
+
+# 安装插件
+/plugin install tailwind-docs@tailwindcss-llms
 ```
 
 然后使用 `/tailwind-docs` 查询任何 Tailwind CSS 问题！
@@ -54,13 +58,19 @@ yarn add tailwindcss-llms
 
 最简单的安装方式是通过 Claude Code 插件市场：
 
+**步骤 1: 添加插件市场**
 ```bash
 /plugin marketplace add wulala0102/tailwindcss-llms
 ```
 
+**步骤 2: 安装插件**
+```bash
+/plugin install tailwind-docs@tailwindcss-llms
+```
+
 这会自动：
-- 安装包
-- 下载并生成 Tailwind CSS 文档
+- 安装 npm 包
+- 下载并生成 Tailwind CSS 文档（约 20-30 秒）
 - 配置 skill
 - 无需手动设置
 

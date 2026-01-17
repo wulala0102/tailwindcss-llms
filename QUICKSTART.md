@@ -2,10 +2,16 @@
 
 ## 方式一：通过插件市场安装（推荐）
 
-最简单的方式，一条命令搞定：
+最简单的方式：
 
+**步骤 1: 添加插件市场**
 ```bash
 /plugin marketplace add wulala0102/tailwindcss-llms
+```
+
+**步骤 2: 安装插件**
+```bash
+/plugin install tailwind-docs@tailwindcss-llms
 ```
 
 等待安装完成（约 20-30 秒），然后直接使用：
