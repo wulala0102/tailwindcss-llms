@@ -1,28 +1,22 @@
 {
-  "owner": "wulala0102",
+  "name": "tailwindcss-llms",
+  "owner": {
+    "name": "wulala0102"
+  },
   "plugins": [
     {
       "name": "tailwindcss-llms",
       "version": "0.0.2",
-      "displayName": "Tailwind CSS Documentation",
       "description": "Tailwind CSS official documentation in Markdown format, optimized for LLMs. Query any Tailwind CSS question with /tailwind-docs command.",
-      "repository": "wulala0102/tailwindcss-llms",
-      "license": "MIT",
-      "keywords": [
-        "tailwindcss",
-        "documentation",
-        "css",
-        "llm",
-        "markdown"
-      ],
-      "skills": [
-        {
-          "name": "tailwind-docs",
-          "path": "skills/tailwind-docs",
-          "description": "Query Tailwind CSS documentation with intelligent search and examples"
+      "source": {
+        "type": "npm",
+        "package": "tailwindcss-llms"
+      },
+      "skills": {
+        "tailwind-docs": {
+          "path": "skills/tailwind-docs"
         }
-      ],
-      "postInstall": "node scripts/postinstall.js"
+      }
     }
   ]
 }
