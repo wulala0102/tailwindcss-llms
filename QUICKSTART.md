@@ -1,6 +1,26 @@
 # 快速开始指南
 
-## 安装
+## 方式一：通过插件市场安装（推荐）
+
+最简单的方式，一条命令搞定：
+
+```bash
+/plugin marketplace add wulala0102/tailwindcss-llms
+```
+
+等待安装完成（约 20-30 秒），然后直接使用：
+
+```bash
+/tailwind-docs 如何创建渐变背景？
+```
+
+就这么简单！
+
+## 方式二：手动安装
+
+### 1. 安装
+
+在你的项目目录中运行：
 
 ```bash
 npm install tailwindcss-llms
@@ -10,18 +30,26 @@ npm install tailwindcss-llms
 1. 从 GitHub 拉取最新的 Tailwind CSS 文档
 2. 转换为 Markdown 格式
 3. 生成 llms.txt 索引文件
-4. 安装 Claude Code skill
+4. 准备 Claude Code skill
 
 约需 20-30 秒，会显示进度条。
 
-## 在 Claude Code 中使用
+### 2. 使用 Skill
 
-### 最简单的方式
+### 方式一：显式调用
 
-直接在 Claude Code 中提问：
+在 Claude Code 中直接使用：
 
 ```
 /tailwind-docs 如何创建渐变背景？
+```
+
+### 方式二：自然对话
+
+直接提问（包含关键词会自动触发）：
+
+```
+我想用 Tailwind 实现一个响应式布局
 ```
 
 ### 更多示例
@@ -88,13 +116,19 @@ cat node_modules/tailwindcss-llms/llms.txt
 ## 常见问题
 
 **Q: Skill 不工作？**
-A: 确保已安装包，并在项目目录中使用 Claude Code
+A: 检查 `.claude/skills/tailwind-docs` 是否存在，确认符号链接已创建
 
 **Q: 如何更新文档？**
-A: 运行 `npm install tailwindcss-llms@latest`
+A: 运行 `npm install tailwindcss-llms@latest`，然后重新创建符号链接
 
 **Q: 如何自定义 Skill？**
-A: 编辑 `skills/tailwind-docs/prompt.md`
+A: 编辑 `.claude/skills/tailwind-docs/prompt.md`（如果是符号链接，会直接修改源文件）
+
+**Q: Windows 上如何创建符号链接？**
+A: 使用 `mklink /D` 命令，或直接复制文件：
+```bash
+xcopy /E /I node_modules\tailwindcss-llms\skills\tailwind-docs .claude\skills\tailwind-docs
+```
 
 **Q: 支持哪些 Tailwind 版本？**
 A: 始终是最新版本，因为从官方仓库拉取

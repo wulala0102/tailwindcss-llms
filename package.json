@@ -1,12 +1,13 @@
 {
   "name": "tailwindcss-llms",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Tailwind CSS documentation in markdown format optimized for LLMs",
   "main": "index.js",
   "scripts": {
     "postinstall": "node scripts/postinstall.js",
     "build": "node scripts/build.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test-skill.js",
+    "verify": "node test-skill.js"
   },
   "keywords": [
     "tailwindcss",
@@ -23,9 +24,11 @@
     "docs/",
     "scripts/",
     "skills/",
+    ".claude-plugin/",
     "index.js",
     "llms.txt",
-    "README.md"
+    "README.md",
+    "QUICKSTART.md"
   ],
   "repository": {
     "type": "git",
